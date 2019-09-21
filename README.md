@@ -6,6 +6,8 @@ Step to run the application
 
 # Run the server
   npm run start:mac // if running machine is mac
+  
+  
   npm run start:pc // if running machine is pc
   
 # Run the test for mac device
