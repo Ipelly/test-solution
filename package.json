@@ -1,0 +1,44 @@
+{
+    "name": "merrill-corp-assessment",
+    "version": "1.0.0",
+    "description": "It's an assessment",
+    "main": "index.js",
+    "keywords": [],
+    "author": "Iqbal M Ipel",
+    "license": "ISC",
+    "scripts": {
+        "start:mac": "export ENV_NAME=development && nodemon",
+        "start:pc": "SET ENV_NAME=development && nodemon",
+        "test:mac": "export ENV_NAME=test && mocha test/**/*.*.spec.js",
+        "test:pc": "SET ENV_NAME=test && mocha test/**/*.*.spec.js"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-http": "^4.3.0",
+        "mocha": "^6.2.0",
+        "nodemon": "^1.18.9",
+        "supertest": "^4.0.2"
+    },
+    "dependencies": {
+        "assert": "^1.4.1",
+        "bcrypt-nodejs": "0.0.3",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.18.3",
+        "config-yml": "^0.10.3",
+        "dotenv": "^8.1.0",
+        "events": "^3.0.0",
+        "express": "^4.16.4",
+        "express-session": "^1.15.6",
+        "express-xml-bodyparser": "^0.3.0",
+        "fs": "0.0.1-security",
+        "http": "0.0.0",
+        "http-status-codes": "^1.3.2",
+        "joi": "^14.3.1",
+        "morgan": "^1.9.1",
+        "path": "^0.12.7",
+        "request": "^2.88.0",
+        "request-promise-native": "^1.0.7",
+        "winston": "^3.2.1"
+    }
+}
