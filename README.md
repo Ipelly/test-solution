@@ -2,7 +2,7 @@ Step to run the application
 ================================
 
 # Install the JS libs
-  npm istall
+  npm install
 
 # Run the server
   npm run start:mac // if running machine is mac
