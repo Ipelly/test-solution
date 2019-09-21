@@ -3,9 +3,12 @@ Step to run the application
 
 # Install the JS libs
   npm istall
-# Run the server
-  npm start
 
+# Run the server
+  npm run start:mac // if running machine is mac
+  or 
+  npm run start:pc // if running machine is mac
+  
 # Run the test for mac device
   npm run test:mac
 
