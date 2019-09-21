@@ -23,3 +23,15 @@ Step to run the application
     Response : A list of users(registered and unregisterd).
                  1. A list of project will be associated with user object if there any project membership.
                  2. A empty project will be there in user object if there is no any project membership.
+
+# RUN Application in Docker Container
+
+Steps -
+ 1. Open the dockerFIle in application root directory -
+ 2. Modify WORKDIR by wherever you want to copy application
+ 3. run the below to command in order to run the application in docker container 
+    a.  docker build -t node-test-sol .
+    b.  docker run -it -p 5000:8000 node-test-sol
+  
+URL : http://localhost:5000/users/ 
+the docker listening port would be application port which is 5000.
