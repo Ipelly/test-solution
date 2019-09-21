@@ -11,7 +11,9 @@ class UtilityDataManipulator {
         let resultantArr = [];
         try{
             arg1.map(arg => {
-                arg.projects = arg2.filter(project => project.userId == arg.id)
+                let projects =[];
+                arg2.filter(project => project.userId == arg.id).map( p =>projects.push(p.id));
+                arg.projects = projects
                 resultantArr.push(arg);
             });
             return resultantArr;
