@@ -14,30 +14,46 @@ if( fs.existsSync(logDir)){
 }
 
 const transports = [
-    new (winston.transports.Console)({
-        colorize : true,
-        level : config.logger.level,
-        timestamp : true,
-        silent : config.isTest,
-        handleExceptions : true, 
-        json: false
-    })
-]; 
+        new (winston.transports.Console)({
+            filename : config.logger.appLogFile,
+            timestamp : true,
+            silent : false,
+            createDirectory : true,
+            handleExceptions : true, 
+            colorize : true,
+            json: false,
+            maxFiles : 5,
+            maxsize : 5242880,
+            level : config.logger.level         
+        })
+    ]; 
+
+// const transports = [
+//     new (winston.transports.Console)({
+//         colorize : true,
+//         level : config.logger.level,
+//         timestamp : true,
+//         silent : config.isTest,
+//         handleExceptions : true, 
+//         json: false
+//     })
+// ]; 
 
 
-if( !config.isDevelopment) {
-    transports.push(new (winston.transports.file)({
-        filename : config.logger.appLogFile,
-        timestamp : true,
-        silent : true,
-        createDirectory : true,
-        handleExceptions : true,
-        colorize : false,
-        json: false,
-        maxFiles : 5,
-        maxsize : 5242880
-    }));
-}
+// if( !config.isDevelopment) {
+//     let obj = 
+//     transports.push(new (winston.transports.file)({
+//         filename : config.logger.appLogFile,
+//         timestamp : true,
+//         silent : true,
+//         createDirectory : true,
+//         handleExceptions : true,
+//         colorize : false,
+//         json: false,
+//         maxFiles : 5,
+//         maxsize : 5242880
+//     }));
+// }
 
 const logger = winston.createLogger({transports});
 

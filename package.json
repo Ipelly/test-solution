@@ -7,11 +7,7 @@
     "author": "Iqbal M Ipel",
     "license": "ISC",
     "scripts": {
-        "start": "export ENV_NAME=development && node src/server",
-        "start:mac": "export ENV_NAME=development && nodemon",
-        "start:pc": "SET ENV_NAME=development && nodemon",
-        "test:mac": "export ENV_NAME=test && mocha test/**/*.*.spec.js",
-        "test:pc": "SET ENV_NAME=test && mocha test/**/*.*.spec.js"
+        "start": "export ENV_NAME=production && node src/server"
     },
     "devDependencies": {
         "chai": "^4.2.0",

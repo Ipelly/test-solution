@@ -12,7 +12,7 @@ function getConfigVars() {
         case 'test':
             configVars = config.test;
             break;
-        case 'test':
+        case 'production':
             configVars = config.production;
             break;
         default:

@@ -6,8 +6,11 @@ const config = require('./config/config');
 const logger = require('./logger/app.logger')
 const server = http.createServer(app);
 
+
+
 const port = normalizePort(config.port);
 app.set('port', port);
+
 
 server.listen(port);
 server.on('error', onError);
