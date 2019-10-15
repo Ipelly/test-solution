@@ -8,7 +8,8 @@ const server = http.createServer(app);
 
 
 
-const port = normalizePort(config.port);
+//const port = normalizePort(config.port);
+const port = process.env.PORT || 8000;
 app.set('port', port);
 
 
