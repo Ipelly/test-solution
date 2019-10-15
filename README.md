@@ -2,11 +2,12 @@ Step to run the application
 ================================
 
 # Install the JS libs
-  npm istall
+  npm install
 
 # Run the server
   npm run start:mac // if running machine is mac
-  or 
+  
+  
   npm run start:pc // if running machine is pc
   
 # Run the test for mac device
@@ -29,9 +30,15 @@ Step to run the application
 Steps -
  1. Open the dockerFIle in application root directory -
  2. Modify WORKDIR by wherever you want to copy application
+<<<<<<< HEAD
  3. run the below to command in order to run the application in docker container.
   
+=======
+ 3. run the below to command in order to run the application in docker container 
+    
+>>>>>>> 7bc7cfefea923e3071044d46bbd606c0610fbfc8
     a.  docker build -t node-test-sol .
+    
     b.  docker run -it -p 5000:8000 node-test-sol
   
 URL : http://localhost:5000/users/ 
