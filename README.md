@@ -29,7 +29,8 @@ Step to run the application
 Steps -
  1. Open the dockerFIle in application root directory -
  2. Modify WORKDIR by wherever you want to copy application
- 3. run the below to command in order to run the application in docker container 
+ 3. run the below to command in order to run the application in docker container.
+  
     a.  docker build -t node-test-sol .
     b.  docker run -it -p 5000:8000 node-test-sol
   

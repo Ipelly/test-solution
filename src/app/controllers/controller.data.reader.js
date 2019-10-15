@@ -18,7 +18,7 @@ class ControllerDataReader {
                 userWithProject
             })
         } catch (error) {
-            logger.error(` ControllerDataReader - GetData: Not able to get the response. ${error}`)
+            logger.error(`ControllerDataReader - GetData: Not able to get the response. ${error}`)
             res.status(500).json(error);
         }
     }
