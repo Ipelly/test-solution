@@ -7,6 +7,7 @@
     "author": "Iqbal M Ipel",
     "license": "ISC",
     "scripts": {
+        "lint": "eslint",
         "start": "export ENV_NAME=development && node src/server",
         "start:mac": "export ENV_NAME=development && nodemon",
         "start:pc": "SET ENV_NAME=development && nodemon",
@@ -17,6 +18,13 @@
         "chai": "^4.2.0",
         "chai-as-promised": "^7.1.1",
         "chai-http": "^4.3.0",
+        "eslint": "^6.7.1",
+        "eslint-config-standard": "^14.1.0",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-node": "^10.0.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-react": "^7.16.0",
+        "eslint-plugin-standard": "^4.0.1",
         "mocha": "^6.2.0",
         "nodemon": "^1.18.9",
         "supertest": "^4.0.2"

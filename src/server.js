@@ -1,5 +1,7 @@
 'use strict'
 
+let a = 'aaa';
+
 const http = require('http');
 const app = require('./app/app');
 const config = require('./config/config');

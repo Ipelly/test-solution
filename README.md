@@ -19,11 +19,10 @@ Step to run the application
 
 # API Endpoints
 
-1. '/users' (Whole URL : 'http://localhost:8000/users/')
+1. '/places' (Whole URL : 'http://localhost:8000/places?location=-33.8670522,151.1957362&radius=300&name=mongolian%20grill')
     
-    Response : A list of users(registered and unregisterd).
-                 1. A list of project will be associated with user object if there any project membership.
-                 2. A empty project will be there in user object if there is no any project membership.
+    Response : A list of places(which name is mongolian grill and near by given location lat : -33.8670522 and long : 151.1957362 and within the redius of 300).
+
 
 # RUN Application in Docker Container
 
@@ -36,5 +35,5 @@ Steps -
     
     b.  docker run -it -p 5000:8000 node-test-sol
   
-URL : http://localhost:5000/users/ 
+URL : http://localhost:5000/places?location=-33.8670522,151.1957362&radius=300&name=mongolian%20grill 
 the docker listening port would be application port which is 5000.
