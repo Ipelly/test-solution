@@ -9,7 +9,8 @@ const configVars = require('./config.common');
 const envVarsSchema = joi.object({
     REGISTEREDUSERS : joi.string(),
     UNREGISTEREDUSERS : joi.string(),
-    PROJECT_MEMBERSHIP : joi.string()
+    PROJECT_MEMBERSHIP : joi.string(),
+    TICKET : joi.string()
 }).unknown().required();
 
 
@@ -26,7 +27,8 @@ if(error) {
 let envVariables = {
     registeredusers : envVars.REGISTEREDUSERS,
     un_registeredusers : envVars.UNREGISTEREDUSERS,
-    project_memberships : envVars.PROJECT_MEMBERSHIP
+    project_memberships : envVars.PROJECT_MEMBERSHIP,
+    ticket : envVars.TICKET
 }
 
 module.exports = envVariables;

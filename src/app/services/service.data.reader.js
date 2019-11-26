@@ -30,6 +30,14 @@ class ServiceDataReader {
             throw error;
         }
     }
+
+    async fetchStocks(path){
+        try {
+            return await requestUtil.get({path});
+        } catch(error) {
+            throw error;
+        }
+    }
 }
 
 module.exports = new ServiceDataReader();

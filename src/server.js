@@ -47,7 +47,7 @@ function onError(error) {
 function onListening() {
     //let addr = server.address();
     //let bind = (typeof port === 'string') ? `pipe ${addr}` : `port ${addr.port}`;
-    logger.debug(`Process ID : ${process.pid}, Application Listening on ${port}.`);
+    //logger.debug(`Process ID : ${process.pid}, Application Listening on ${port}.`);
 }
 
 

@@ -6,7 +6,9 @@ api :
     REGISTEREDUSERS : https://5c3ce12c29429300143fe570.mockapi.io/api/registeredusers
     UNREGISTEREDUSERS : https://5c3ce12c29429300143fe570.mockapi.io/api/unregisteredusers
     PROJECT_MEMBERSHIP : https://5c3ce12c29429300143fe570.mockapi.io/api/projectmemberships 
+    TICKET : https://ws-api.iextrading.com/1.0/tops?symbols=aapl
 
 logger :
     LOGGER_LEVEL : debug
     HTTP_LOG_LEVEL : dev
+

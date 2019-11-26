@@ -1,11 +1,11 @@
 'use strict'
 
 const express = require('express');
-const dataReaderController = require('../controllers/controller.data.reader');
+const stockController = require('../controllers/controller.stocks');
 let router = express.Router();
 
 
-router.get('/users',dataReaderController.getData);
+router.get('/stock',stockController.getStocks);
 router.get('/api',(req, res) =>{
     res.send('OK'); 
 })
