@@ -7,10 +7,10 @@ const configVars = require('./config.common');
 
 
 const envVarsSchema = joi.object({
-    REGISTEREDUSERS : joi.string(),
-    UNREGISTEREDUSERS : joi.string(),
-    PROJECT_MEMBERSHIP : joi.string(),
-    TICKET : joi.string()
+    GOOGLE_PROTOCALL : joi.string().required(),
+    GOOGLE_HOSTNAME : joi.string().required(),
+    GOOGLE_PLACE_ENDPOINT : joi.string().required(),
+    GOOGLE_API_KEY : joi.string().required()
 }).unknown().required();
 
 
@@ -25,10 +25,10 @@ if(error) {
 }
 
 let envVariables = {
-    registeredusers : envVars.REGISTEREDUSERS,
-    un_registeredusers : envVars.UNREGISTEREDUSERS,
-    project_memberships : envVars.PROJECT_MEMBERSHIP,
-    ticket : envVars.TICKET
+    google_protocall : envVars.GOOGLE_PROTOCALL,
+    google_hostname : envVars.GOOGLE_HOSTNAME,
+    google_place_endpoint : envVars.GOOGLE_PLACE_ENDPOINT,
+    google_api_key : envVars.GOOGLE_API_KEY
 }
 
 module.exports = envVariables;

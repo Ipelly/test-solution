@@ -5,10 +5,6 @@ const app = require('./app/app');
 const config = require('./config/config');
 const logger = require('./logger/app.logger')
 const server = http.createServer(app);
-
-
-
-//const port = normalizePort(config.port);
 const port = process.env.PORT || 8000;
 app.set('port', port);
 
@@ -19,7 +15,6 @@ server.on('listening', onListening);
 
 function normalizePort(val){
     let port = (typeof val === 'string') ? parseInt(val,10) : val;
-    
     if(isNaN(port))         return val;
     else if ( port >= 0)    return port;
     else                    return false;
@@ -45,11 +40,10 @@ function onError(error) {
 }
 
 function onListening() {
-    //let addr = server.address();
-    //let bind = (typeof port === 'string') ? `pipe ${addr}` : `port ${addr.port}`;
-    //logger.debug(`Process ID : ${process.pid}, Application Listening on ${port}.`);
+    let addr = server.address();
+    let bind = (typeof port === 'string') ? `pipe ${addr}` : `port ${addr.port}`;
+    logger.debug(`Process ID : ${process.pid}, Application Listening on ${port}.`);
 }
-
 
 module.exports = server;
 

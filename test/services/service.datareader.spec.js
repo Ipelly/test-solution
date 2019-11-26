@@ -1,7 +1,5 @@
 'use strict'
 
-
-
 var expect = require('chai').expect;
 let chai = require('chai');
 let chaiHttp = require('chai-http');
@@ -14,53 +12,28 @@ let should = chai.should();
 chai.use(chaiHttp);
 
 
-
 describe("Service : Data Reader ", ()=> {
-  describe("Fetch registered users : fetchRegisteredUsers", ()=>{
-      let registeredUsers = null;
+  describe("Get all nearby places : fetchPlaceNearBy", ()=>{
+      let places = null;
+      let query = {
+            location : `-33.8670522,151.1957362`,
+            radius :`500`,
+            name :`harbour`,
+            types : `food`
+      }
       beforeEach(async ()=>{
-          registeredUsers = await dataReaderService.fetchRegisteredUsers(config.api_endpoints.registeredusers);
+        places = await dataReaderService.fetchPlaceNearBy(query);
       });
 
-      it("should return a list of registered users", ()=>{
-          expect(registeredUsers).to.be.an('Array');
+      it("should return a list of places", ()=>{
+          expect(places.results).to.be.an('Array');
       });
 
-      it("should return 20 registered users", ()=>{
-          expect(registeredUsers.length).equal(20);
+      it("should return 18 nearby places given harbour", ()=>{
+          expect(places.results.length).equal(18);
       });
   });
 
-  describe("Fetch unregistered users : fetchUnregisteredUsers", ()=> {
-      let unregisteredUsers = null;
-      beforeEach(async ()=>{
-          unregisteredUsers = await dataReaderService.fetchUnregisteredUsers(config.api_endpoints.un_registeredusers);
-      });
-
-      it("should return a list of unregistered users", ()=>{
-        expect(unregisteredUsers).to.be.an('Array');
-      });
-
-      it("should return 15 unregistered users", ()=>{
-        expect(unregisteredUsers.length).equal(15);
-      });
-
-  });
-
-  describe("Fetch all project : fetchProjects", ()=> {
-      let projects = null;
-      beforeEach(async ()=>{
-          projects = await dataReaderService.fetchProjects(config.api_endpoints.project_memberships);
-      });
-
-      it("shoul return a list of projects", ()=>{
-        expect(projects).to.be.an('Array');
-      });
-
-      it("shoul return 37 registered users", ()=>{
-          expect(projects.length).equal(37);
-      });
-  });
 })
 
 

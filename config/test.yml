@@ -1,12 +1,14 @@
 environment :
-    NODE_ENV : development
+    NODE_ENV : test
     PORT : 8000
 
 api :
-    REGISTEREDUSERS : https://5c3ce12c29429300143fe570.mockapi.io/api/registeredusers
-    UNREGISTEREDUSERS : https://5c3ce12c29429300143fe570.mockapi.io/api/unregisteredusers
-    PROJECT_MEMBERSHIP : https://5c3ce12c29429300143fe570.mockapi.io/api/projectmemberships 
-    TICKET : https://ws-api.iextrading.com/1.0/tops?symbols=aapl
+    GOOGLE_PROTOCALL : https
+    GOOGLE_HOSTNAME : maps.googleapis.com/maps/api
+    GOOGLE_PLACE_ENDPOINT : place/nearbysearch/json
+    GOOGLE_API_KEY : AIzaSyAdAnwAfMAEDU3igUPKq_v8QrapgzyNHT4
+
+
 
 logger :
     LOGGER_LEVEL : debug
