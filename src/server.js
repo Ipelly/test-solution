@@ -6,7 +6,7 @@ const config = require('./config/config');
 const logger = require('./logger/app.logger')
 const server = http.createServer(app);
 
-
+console.log(config);
 
 //const port = normalizePort(config.port);
 const port = process.env.PORT || 8000;

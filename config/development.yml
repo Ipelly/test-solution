@@ -3,9 +3,12 @@ environment :
     PORT : 8000
 
 api :
-    endpoint : https://interview.domio.io/properties/
+    ENDPOINT : https://interview.domio.io/properties/
 
 logger :
     LOGGER_LEVEL : debug
     HTTP_LOG_LEVEL : dev
+
+database : 
+    DB_SOURCE : db.domio
 

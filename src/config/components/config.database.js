@@ -7,22 +7,22 @@ const configVars = require('./config.common');
 
 
 const envVarsSchema = joi.object({
-    ENDPOINT : joi.string()
+    DB_SOURCE : joi.string()
 }).unknown().required();
 
 
 const {
     error,
     value : envVars
-} = joi.validate(configVars.getConfigVars().api, envVarsSchema);
+} = joi.validate(configVars.getConfigVars().database, envVarsSchema);
 
 if(error) {
-    console.error(`API Endpoints : Config Varidation Error : ${error.message}`);
+    console.error(`Database : Config Varidation Error : ${error.message}`);
     process.exit(1);
 }
 
 let envVariables = {
-    endpoint : envVars.ENDPOINT
+    db_source : envVars.DB_SOURCE
 }
 
 module.exports = envVariables;
