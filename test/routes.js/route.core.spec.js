@@ -15,35 +15,28 @@ global.request = supertest(app);
 
 describe("Route : API Endpoint Inegration test", ()=> {
 
-    describe("GET All users registered and registered with membership projects", ()=>{
+    describe("GET All users properties", ()=>{
 
   
-        it('should return a list of users', (done)=> {
-            request.get('/users')
+        it('should return a list of properties', (done)=> {
+            request.get('/properties')
                 .expect(200)
                 .end(function(err, res) {
-                    expect(res.body.userWithProject).to.be.an('Array');
+                    console.log(res.body.properties)
+                    expect(res.body.properties).to.be.an('Array');
+                    done(err);
+            });
+        });
+
+        it('should return a msg', (done)=> {
+            request.get('/watch')
+                .expect(200)
+                .end(function(err, res) {
+                    expect(res.body.Message).to.be.an('string');
                     done(err);
             });
         });
         
-        it('should return 2 projects under firstName 1 lastname 1', (done)=> {
-            request.get('/users')
-                .expect(200)
-                .end((err, res)=> {
-                    expect(res.body.userWithProject[0].projects).to.have.lengthOf(2);
-                    done(err);
-            });
-        });
-
-        it('should return no projects under firstName 2 lastname 2', (done)=> {
-            request.get('/users')
-                .expect(200)
-                .end((err, res)=> {
-                    expect(res.body.userWithProject[1].projects).to.have.lengthOf(0);
-                    done(err);
-            });
-        });
     });
 
 })

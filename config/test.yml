@@ -3,12 +3,18 @@ environment :
     PORT : 8000
 
 api :
-    REGISTEREDUSERS : https://5c3ce12c29429300143fe570.mockapi.io/api/registeredusers
-    UNREGISTEREDUSERS : https://5c3ce12c29429300143fe570.mockapi.io/api/unregisteredusers
-    PROJECT_MEMBERSHIP : https://5c3ce12c29429300143fe570.mockapi.io/api/projectmemberships 
-    TICKET : https://ws-api.iextrading.com/1.0/tops?symbols=aapl
+    ENDPOINT : https://interview.domio.io/properties/
 
 logger :
     LOGGER_LEVEL : debug
     HTTP_LOG_LEVEL : dev
+
+database : 
+    DB_SOURCE : db.domio
+
+admin : 
+    SMTP_SERVER : gmail
+    USER : ipelly.bd@gmail.com
+    PASSWORD : XXXXXXXXXX
+    TO : iqbalipel@gmail.com
 

@@ -1,11 +1,12 @@
 'use strict'
 
 const express = require('express');
-const stockController = require('../controllers/controller.stocks');
+const properitesController = require('../controllers/controller.properties');
 let router = express.Router();
 
 
-router.get('/stock',stockController.getStocks);
+router.get('/properties',properitesController.getProperties);
+router.get('/watch',properitesController.watchProperties);
 router.get('/api',(req, res) =>{
     res.send('OK'); 
 })

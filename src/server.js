@@ -4,15 +4,13 @@ const http = require('http');
 const app = require('./app/app');
 const config = require('./config/config');
 const logger = require('./logger/app.logger')
+const database = require('./db/db.sqlite')
 const server = http.createServer(app);
 
-console.log(config);
-
-//const port = normalizePort(config.port);
 const port = process.env.PORT || 8000;
 app.set('port', port);
 
-
+//database.init();
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
@@ -45,9 +43,9 @@ function onError(error) {
 }
 
 function onListening() {
-    //let addr = server.address();
-    //let bind = (typeof port === 'string') ? `pipe ${addr}` : `port ${addr.port}`;
-    //logger.debug(`Process ID : ${process.pid}, Application Listening on ${port}.`);
+    let addr = server.address();
+    let bind = (typeof port === 'string') ? `pipe ${addr}` : `port ${addr.port}`;
+    logger.debug(`Process ID : ${process.pid}, Application Listening on ${port}.`);
 }
 
 

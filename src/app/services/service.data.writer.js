@@ -3,20 +3,19 @@
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const requestUtil = require('../../utility/util.request')
+const database = require('../../db/db.sqlite')
 const logger = require('../../logger/app.logger')
 
-class ServiceDataReader {
-
-    async fetchProperties(path){
+class ServiceDataWriter {
+    saveProperties(qry){
         try {
-            return await requestUtil.get({path});
+            database.save(qry);
         } catch(error) {
             throw error;
         }
     }
 }
 
-module.exports = new ServiceDataReader();
+module.exports = new ServiceDataWriter();
 
 

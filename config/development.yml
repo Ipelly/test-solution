@@ -12,3 +12,9 @@ logger :
 database : 
     DB_SOURCE : db.domio
 
+admin : 
+    SMTP_SERVER : gmail
+    USER : ipelly.bd@gmail.com
+    PASSWORD : XXXXXXXXXX
+    TO : iqbalipel@gmail.com
+
