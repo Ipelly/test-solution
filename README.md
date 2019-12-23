@@ -8,6 +8,8 @@ Step to run the application
     SMTP : Server related info is required.
 
 # Run the server
+    npm start
+
     npm run start:mac // if running machine is mac
   
     npm run start:pc // if running machine is pc
@@ -32,11 +34,12 @@ Step to run the application
 
 2. '/watch' (Whole URL : 'http://localhost:8000/watch/')
     
-    Operation : It will consume the domio API in second, and update the SQLite DB.
+    Operation : It will consume the domio API in every second, and update the SQLite DB.
                 Notify the Admin if require via sending an email.
                 It will never stop.
 
-# API Endpoints
+# Deliverables
+
     Part 1 & 2 : Its covered in both endpoints. 
     Part 3 : Created a factory to create a notificationHelper object based on property type. 
              If new property type is added later, which need different way of notification, a new helper file(like : utility.email.sender)will be required to add in (/src/utility/notificationhelper) and update the utility.notification.helper file.
